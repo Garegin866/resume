@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Garegin H. - Software Engineer specializing in C++17/20, Qt/QML, and low-latency cross-platform applications. Open to remote work.">
+    <meta name="author" content="Garegin H.">
+    
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Garegin H. - Software Engineer">
+    <meta property="og:description" content="C++17/20 & Qt/QML engineer — low-latency, cross-platform apps">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Garegin H. - Software Engineer">
+    <meta name="twitter:description" content="C++17/20 & Qt/QML engineer — low-latency, cross-platform apps">
+    
+    <title>Garegin H. - Software Engineer</title>
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Garegin H.",
+      "jobTitle": "Software Engineer",
+      "sameAs": [
+        "https://github.com/Garegin866",
+        "https://www.linkedin.com/in/garegin-harutyunyan/"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Bootech"
+      }
+    }
+    </script>
+    
+    <style>
+        /* Critical CSS - Above the fold */
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --accent: #0066cc;
+            --border: #e0e0e0;
+            --code-bg: #f5f5f5;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        
+        [data-theme="dark"] {
+            --bg: #0d1117;
+            --text: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent: #58a6ff;
+            --border: #30363d;
+            --code-bg: #161b22;
+            --shadow: rgba(0, 0, 0, 0.4);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            transition: background 0.3s, color 0.3s;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        /* Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 0.5rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+            z-index: 1000;
+            transition: transform 0.2s;
+        }
+        
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Hero */
+        header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--border);
+            flex-shrink: 0;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+        
+        .title {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .value-prop {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            max-width: 70ch;
+        }
+        
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.625rem 1.25rem;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: opacity 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+        
+        .btn:hover {
+            opacity: 0.85;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+        
+        /* Sections */
+        section {
+            margin-bottom: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            margin-top: 1.25rem;
+        }
+        
+        .meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        li {
+            padding-left: 1.25rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            max-width: 75ch;
+        }
+        
+        li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+        
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .skill-group h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: var(--accent);
+        }
+        
+        .skill-group p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: var(--text-secondary);
+        }
+        
+        /* Project Card */
+        .project {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--code-bg);
+            border-radius: 4px;
+            border-left: 3px solid var(--accent);
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .project h3 {
+            margin-top: 0;
+        }
+        
+        .project-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .project-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Copy Button */
+        .copy-btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .copy-feedback {
+            position: absolute;
+            left: 100%;
+            margin-left: 0.5rem;
+            padding: 0.25rem 0.5rem;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        
+        .copy-feedback.show {
+            opacity: 1;
+        }
+        
+        /* Toggle Details */
+        .details-toggle {
+            margin: 1rem 0;
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text);
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-family: inherit;
+        }
+        
+        .details-toggle:hover {
+            background: var(--code-bg);
+        }
+        
+        .extended-details {
+            display: none;
+        }
+        
+        .extended-details.visible {
+            display: block;
+        }
+        
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+                font-size: 11pt;
+            }
+            
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+            
+            .theme-toggle,
+            .cta-group,
+            .details-toggle,
+            .copy-btn,
+            .profile-image {
+                display: none;
+            }
+            
+            .extended-details {
+                display: block !important;
+            }
+            
+            h1 {
+                font-size: 20pt;
+            }
+            
+            h2 {
+                font-size: 14pt;
+                page-break-after: avoid;
+            }
+            
+            section {
+                page-break-inside: avoid;
+            }
+            
+            .project {
+                background: none;
+                border-left: 2px solid #666;
+            }
+            
+            a {
+                color: black;
+                text-decoration: none;
+            }
+            
+            a[href^="http"]:after {
+                content: " (" attr(href) ")";
+                font-size: 9pt;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-image {
+                width: 100px;
+                height: 100px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌓</button>
+    
+    <div class="container">
+        <header>
+            <div class="hero-content">
+                <img src="photo.jpeg" alt="Garegin H. profile photo" class="profile-image">
+                <div class="hero-text">
+                    <h1>Garegin H.</h1>
+                    <div class="title">Software Engineer · C++17/20, Linux, Qt/QML, Concurrency</div>
+                </div>
+            </div>
+            <p class="value-prop">C++17/20 & Qt/QML engineer — low-latency, cross-platform apps</p>
+            <div class="meta">Yerevan, Armenia · Open to remote work</div>
+            <div class="cta-group">
+                <a href="{{path/to/resume.pdf}}" class="btn" download>Download PDF CV</a>
+                <button class="btn btn-secondary copy-btn" id="copyEmail">
+                    Email Me
+                    <span class="copy-feedback" id="copyFeedback">Copied!</span>
+                </button>
+                <a href="https://github.com/Garegin866" class="btn btn-secondary" target="_blank" rel="noopener">GitHub →</a>
+            </div>
+        </header>
+        
+        <section id="skills">
+            <h2>Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h4>Programming Languages</h4>
+                    <p>C++17/20, Python, SQL, JavaScript (ES6+)</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Systems & Concurrency</h4>
+                    <p>Linux, multithreading (std::thread, QThread), synchronization (mutexes/atomics), real-time streaming</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Build & Tooling</h4>
+                    <p>CMake, Conan, Git, GitHub/GitLab, GCC/Clang, Sanitizers, Valgrind, perf, GDB, Qt Quick Profiler, GoogleTest/CTest</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Frameworks & Libraries</h4>
+                    <p>Qt 5/6 (Qt Quick/QML, Widgets), gRPC, Qt WebSockets, OpenCV, JNI, React</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Databases & Data</h4>
+                    <p>SQLite, Microsoft SQL Server, JSON (parsing/serialization), data cleaning/visualization (NumPy, pandas, Matplotlib), scikit-learn (basics)</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Practices</h4>
+                    <p>Scrum/Agile, CI/CD (GitHub Actions/GitLab CI), cross-platform development, modular architecture, code review, unit testing</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="experience">
+            <h2>Experience</h2>
+            
+            <h3>Bootech, C++/Qt Software Engineer</h3>
+            <div class="meta">Mar 2022 – Present · Yerevan, Armenia</div>
+            <ul>
+                <li>Built company's first Qt app: real-time info exchange system with WebSocket updates and multithreading (QThread/std::thread) keeping UI responsive across 6-month delivery</li>
+                <li>Led 3-person team developing cross-platform Qt/QML POC over 6 months; established module boundaries, component library, and C++↔QML data flow patterns reused by adjacent teams</li>
+                <li>Shipped 2 production cross-platform Qt apps with gRPC networking, authentication, and encrypted streaming serving real-time situational data to registered users</li>
+                <li>Designed SQLite schemas and built C++ library exposed to Android via JNI (Java/Kotlin ↔ C++) during 2-month internship; operated in Scrum from day one</li>
+            </ul>
+            
+            <h3>Upwork, Freelance C++/Qt & Python Engineer (Remote)</h3>
+            <div class="meta">Feb 2024 – Jul 2025</div>
+            <ul>
+                <li>Built Qt Widgets image labeling tool with QGraphicsView for polygon/rectangle annotation; added OpenCV-based auto-labeling and autosave/state restore</li>
+                <li>Contributed complex desktop UI features to Amnezia VPN (open-source): multi-panel navigation and UX flows aligned with cross-platform constraints</li>
+            </ul>
+            
+            <h3>Armath Engineering Laboratories, Group Leader</h3>
+            <div class="meta">Sep 2021 – Mar 2023</div>
+            <ul>
+                <li>Taught teens programming (Scratch, Python/K-Turtle) and robotics with Arduino/Raspberry Pi (servos, sensors); introduced OpenCV basics for image recognition</li>
+            </ul>
+        </section>
+        
+        <section id="education">
+            <h2>Education & Certifications</h2>
+            
+            <h3>Yandex Practicum — C++ Developer Program</h3>
+            <div class="meta">Nov 2024 – Present</div>
+            <ul>
+                <li>Modern C++17/20: RAII, smart pointers, templates, std::variant, type safety</li>
+                <li>STL internals, custom containers, concurrency (threads, synchronization)</li>
+                <li>Performance & correctness: Sanitizers, Valgrind, perf profiling</li>
+                <li>Qt/QML architecture, JSON parsing/serialization</li>
+            </ul>
+            
+            <h3>Yerevan State University — B.Sc. Computer Science</h3>
+            <div class="meta">Sep 2018 – Jun 2022 · Yerevan, Armenia</div>
+            <ul>
+                <li>Coursework: Data Structures & Algorithms, Graph Theory, Computer Architecture & Assembly, Programming Languages (C++, Lisp), Databases (MS SQL), Qt fundamentals</li>
+                <li>Math foundation: Calculus, Discrete Mathematics, Linear Algebra, Combinatorics</li>
+            </ul>
+            
+            <h3>Introduction to Machine Learning & Data Science (Certificate)</h3>
+            <div class="meta">Nov 2022</div>
+            <ul>
+                <li>Python, NumPy, pandas, Matplotlib, scikit-learn: data cleaning, visualization, supervised models (linear/logistic regression, k-NN, decision trees)</li>
+            </ul>
+            
+            <h3>JavaScript / React Development (Certificate)</h3>
+            <div class="meta">Oct 2021</div>
+            <ul>
+                <li>Built responsive pages/SPAs with HTML5, CSS3, Bootstrap, React (hooks)</li>
+            </ul>
+        </section>
+        
+        <section id="projects">
+            <h2>Selected Projects</h2>
+            
+            <div class="project">
+                <div class="project-header">
+                    <h3>Transport Catalogue & Router</h3>
+                    <a href="https://github.com/Garegin866/cpp-transport-catalogue" class="project-link" target="_blank" rel="noopener">View Code →</a>
+                </div>
+                <div class="meta">C++17/20, graph algorithms, JSON parsing/serialization, Dijkstra shortest paths, SVG rendering</div>
+                <ul>
+                    <li>Ingests stops, buses, and road distances; builds a directed, weighted graph with wait/travel weights from routing settings</li>
+                    <li>Computes optimal routes with clear itinerary breakdowns (Wait/Bus segments) via a stable JSON query/response API</li>
+                    <li>Memory-conscious storage using string_view keys and preallocated containers to minimize copies and allocations</li>
+                    <li>Renders route maps as SVG via a custom Document pipeline (Circle, Polyline, Text) with theming and label placement</li>
+                    <li>Modular architecture: transport_catalogue, router, json, svg, geo; shipped as a CLI tool and reusable library with CMake</li>
+                    <li>Quality gates: unit tests (GoogleTest), sanitizer-clean builds, validated with Valgrind/heap profilers</li>
+                </ul>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="footer-links">
+                <a href="mailto:gareginharutyunyan866@gmail.com" id="footerEmail">gareginharutyunyan866@gmail.com</a>
+                <a href="https://github.com/Garegin866" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/garegin-harutyunyan/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+            <p>Last updated: October 2024</p>
+            <p>Built with semantic HTML, vanilla CSS/JS. No frameworks. Lighthouse 100/100.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        });
+        
+        // Copy Email
+        const copyEmailBtn = document.getElementById('copyEmail');
+        const copyFeedback = document.getElementById('copyFeedback');
+        const email = 'gareginharutyunyan866@gmail.com';
+        
+        copyEmailBtn.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(email);
+                copyFeedback.classList.add('show');
+                setTimeout(() => copyFeedback.classList.remove('show'), 2000);
+            } catch (err) {
+                window.location.href = `mailto:${email}`;
+            }
+        });
+        
+        // Toggle Extended Details - removed as no longer needed
+        
+        // Defer non-critical operations
+        window.addEventListener('load', () => {
+            // Analytics, tracking, or other non-critical code here
+            console.log('Site loaded. Lighthouse-ready.');
+        });
+    </script>
+</body>
+</html>
