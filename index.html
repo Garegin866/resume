@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Garegin Harutyunyan - Software Engineer specializing in C++, Qt/QML, and low-latency cross-platform applications. Open to remote work."
+      content="Garegin Harutyunyan - C++/Qt engineer with 4+ years building real-time, cross-platform applications. Yerevan, Armenia. Open to remote work."
     />
     <meta name="author" content="Garegin Harutyunyan" />
 
     <!-- OpenGraph -->
-    <meta property="og:title" content="Garegin Harutyunyan - Software Engineer" />
+    <meta property="og:title" content="Garegin Harutyunyan - C++/Qt Engineer" />
     <meta
       property="og:description"
-      content="C++ & Qt/QML Engineer — low-latency, cross-platform apps"
+      content="C++/Qt engineer — real-time, cross-platform applications"
     />
     <meta property="og:type" content="website" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Garegin Harutyunyan - Software Engineer" />
+    <meta name="twitter:title" content="Garegin Harutyunyan - C++/Qt Engineer" />
     <meta
       name="twitter:description"
-      content="C++ & Qt/QML Engineer — low-latency, cross-platform apps"
+      content="C++/Qt engineer — real-time, cross-platform applications"
     />
 
-    <title>Garegin Harutyunyan - Software Engineer</title>
+    <title>Garegin Harutyunyan - C++/Qt Engineer</title>
 
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
@@ -33,7 +33,7 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Garegin Harutyunyan",
-        "jobTitle": "Software Engineer",
+        "jobTitle": "C++/Qt Software Engineer",
         "sameAs": [
           "https://github.com/Garegin866",
           "https://www.linkedin.com/in/garegin-harutyunyan/"
@@ -208,6 +208,22 @@
         margin-bottom: 0.5rem;
       }
 
+      .role {
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-top: 0.75rem;
+        margin-bottom: 0.35rem;
+      }
+
+      .role .meta {
+        display: inline;
+        font-weight: 400;
+      }
+
+      li a {
+        color: var(--accent);
+      }
+
       ul {
         list-style: none;
         padding-left: 0;
@@ -291,8 +307,9 @@
 
       .copy-feedback {
         position: absolute;
-        left: 100%;
-        margin-left: 0.5rem;
+        bottom: calc(100% + 6px);
+        left: 50%;
+        transform: translateX(-50%);
         padding: 0.25rem 0.5rem;
         background: var(--accent);
         color: #fff;
@@ -451,12 +468,15 @@
           <div class="hero-text">
             <h1>Garegin Harutyunyan</h1>
             <div class="title">
-              Software Engineer · C++, Qt/QML
+              C++/Qt Engineer · Real-time, cross-platform applications
             </div>
           </div>
         </div>
         <p class="value-prop">
-          C++ & Qt/QML Engineer — low-latency, cross-platform apps
+          C++/Qt engineer with 4+ years building real-time, cross-platform
+          applications. Shipped two production Qt apps with gRPC networking and
+          encrypted streaming, led a three-engineer team, and contributed to the
+          open-source Amnezia VPN client.
         </p>
         <div class="meta">Yerevan, Armenia · Open to remote work</div>
         <div class="cta-group">
@@ -521,162 +541,136 @@
         </div>
       </header>
 
-      <section id="skills">
-        <h2>Core Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-group">
-            <h4>Programming Languages</h4>
-            <p>C++17/20, Python, SQL, JavaScript (ES6+)</p>
-          </div>
-          <div class="skill-group">
-            <h4>Systems & Concurrency</h4>
-            <p>
-              Linux, multithreading (std::thread, QThread), synchronization
-              (mutexes/atomics), real-time streaming
-            </p>
-          </div>
-          <div class="skill-group">
-            <h4>Build & Tooling</h4>
-            <p>
-              CMake, Conan, Git, GitHub/GitLab, GCC/Clang, Sanitizers, Valgrind,
-              perf, GDB, Qt Quick Profiler, GoogleTest/CTest
-            </p>
-          </div>
-          <div class="skill-group">
-            <h4>Frameworks & Libraries</h4>
-            <p>
-              Qt 5/6 (Qt Quick/QML, Widgets), gRPC, Qt WebSockets, OpenCV, JNI,
-              React
-            </p>
-          </div>
-          <div class="skill-group">
-            <h4>Databases & Data</h4>
-            <p>
-              SQLite, Microsoft SQL Server, JSON (parsing/serialization), data
-              cleaning/visualization (NumPy, pandas, Matplotlib), scikit-learn
-              (basics)
-            </p>
-          </div>
-          <div class="skill-group">
-            <h4>Practices</h4>
-            <p>
-              Scrum/Agile, CI/CD (GitHub Actions/GitLab CI), cross-platform
-              development, modular architecture, code review, unit testing
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section id="experience">
         <h2>Experience</h2>
 
-        <h3>Bootech, C++/Qt Software Engineer</h3>
-        <div class="meta">Mar 2022 – Present · Yerevan, Armenia</div>
+        <h3>Bootech</h3>
+        <div class="meta">Yerevan, Armenia</div>
+
+        <div class="role">
+          C++/Qt Software Engineer
+          <span class="meta">· May 2022 – Present</span>
+        </div>
         <ul>
           <li>
-            Built company's first Qt app: real-time info exchange system with
-            WebSocket updates and multithreading (QThread/std::thread) keeping
-            UI responsive across 6-month delivery
+            Shipped 2 production cross-platform Qt applications delivering
+            real-time situational data to registered users over gRPC, with
+            authentication and encrypted streaming.
           </li>
           <li>
-            Led 3-person team developing cross-platform Qt/QML POC over 6
-            months; established module boundaries, component library, and
-            C++↔QML data flow patterns reused by adjacent teams
+            Led a 3-engineer team through a 6-month cross-platform Qt/QML proof
+            of concept; defined module boundaries, a shared QML component
+            library and C++-to-QML data-flow patterns that adjacent teams
+            reused.
           </li>
           <li>
-            Shipped 2 production cross-platform Qt apps with gRPC networking,
-            authentication, and encrypted streaming serving real-time
-            situational data to registered users
-          </li>
-          <li>
-            Designed SQLite schemas and built C++ library exposed to Android via
-            JNI (Java/Kotlin ↔ C++) during 2-month internship; operated in Scrum
-            from day one
+            Built the company's first Qt application, a real-time
+            information-exchange client driven by WebSocket updates; ran
+            networking and processing on worker threads (QThread, std::thread)
+            so the UI stayed responsive. Delivered in 6 months.
           </li>
         </ul>
 
-        <h3>Upwork, Freelance C++/Qt & Python Engineer (Remote)</h3>
-        <div class="meta">Feb 2024 – Jul 2025</div>
+        <div class="role">
+          C++ Software Engineering Intern
+          <span class="meta">· Mar 2022 – May 2022</span>
+        </div>
         <ul>
           <li>
-            Built Qt Widgets image labeling tool with QGraphicsView for
-            polygon/rectangle annotation; added OpenCV-based auto-labeling and
-            autosave/state restore
+            Designed SQLite schemas and built a C++ library exposed to Android
+            through JNI bindings for Java/Kotlin, working in Scrum.
+          </li>
+        </ul>
+
+        <h3>Freelance C++/Qt Engineer (Upwork)</h3>
+        <div class="meta">Feb 2024 – Jul 2025 · Remote</div>
+        <ul>
+          <li>
+            Contributed desktop UI features to
+            <a
+              href="https://github.com/amnezia-vpn/amnezia-client"
+              target="_blank"
+              rel="noopener"
+              >Amnezia VPN</a
+            >, an open-source cross-platform VPN client: multi-panel navigation
+            and user flows built within cross-platform constraints.
           </li>
           <li>
-            Contributed complex desktop UI features to Amnezia VPN
-            (open-source): multi-panel navigation and UX flows aligned with
-            cross-platform constraints
+            Built a Qt Widgets image-annotation tool (QGraphicsView polygon and
+            rectangle labeling) with OpenCV-based auto-labeling and
+            autosave/session restore.
           </li>
         </ul>
 
         <h3>Armath Engineering Laboratories, Group Leader</h3>
-        <div class="meta">Sep 2021 – Mar 2023</div>
+        <div class="meta">Sep 2021 – Mar 2023 · Yerevan, Armenia</div>
         <ul>
           <li>
-            Taught teens programming (Scratch, Python/K-Turtle) and robotics
-            with Arduino/Raspberry Pi (servos, sensors); introduced OpenCV
-            basics for image recognition
+            Taught programming and robotics (Python, Arduino, Raspberry Pi,
+            intro OpenCV) to teenage students.
           </li>
         </ul>
       </section>
 
-      <section id="education">
-        <h2>Education & Certifications</h2>
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h4>Languages</h4>
+            <p>C++17/20, Python, SQL</p>
+          </div>
+          <div class="skill-group">
+            <h4>Qt & Libraries</h4>
+            <p>
+              Qt 5/6 (Qt Quick/QML, Widgets), gRPC, WebSockets, OpenCV, JNI
+            </p>
+          </div>
+          <div class="skill-group">
+            <h4>Systems & Concurrency</h4>
+            <p>Linux, multithreading (std::thread, QThread), atomics, mutexes</p>
+          </div>
+          <div class="skill-group">
+            <h4>Tooling & Debugging</h4>
+            <p>
+              CMake, Conan, GCC/Clang, GDB, perf, Valgrind, sanitizers, Qt Quick
+              Profiler, Git
+            </p>
+          </div>
+          <div class="skill-group">
+            <h4>Testing & Delivery</h4>
+            <p>GoogleTest/CTest, GitHub Actions, GitLab CI, Scrum</p>
+          </div>
+          <div class="skill-group">
+            <h4>Data</h4>
+            <p>SQLite, Microsoft SQL Server</p>
+          </div>
+        </div>
+      </section>
 
-        <h3>Yandex Practicum — C++ Developer Program</h3>
-        <div class="meta">Nov 2024 – Present</div>
-        <ul>
-          <li>
-            Modern C++17/20: RAII, smart pointers, templates, std::variant, type
-            safety
-          </li>
-          <li>
-            STL internals, custom containers, concurrency (threads,
-            synchronization)
-          </li>
-          <li>
-            Performance & correctness: Sanitizers, Valgrind, perf profiling
-          </li>
-          <li>Qt/QML architecture, JSON parsing/serialization</li>
-        </ul>
+      <section id="education">
+        <h2>Education</h2>
 
         <h3>Yerevan State University — B.Sc. Computer Science</h3>
         <div class="meta">Sep 2018 – Jun 2022 · Yerevan, Armenia</div>
         <ul>
           <li>
-            Coursework: Data Structures & Algorithms, Graph Theory, Computer
-            Architecture & Assembly, Programming Languages (C++, Lisp),
-            Databases (MS SQL), Qt fundamentals
-          </li>
-          <li>
-            Math foundation: Calculus, Discrete Mathematics, Linear Algebra,
-            Combinatorics
+            Data Structures & Algorithms, Graph Theory, Computer Architecture &
+            Assembly, Databases, Discrete Mathematics, Linear Algebra
           </li>
         </ul>
 
-        <h3>Introduction to Machine Learning & Data Science (Certificate)</h3>
-        <div class="meta">Nov 2022</div>
+        <h3>Yandex Practicum — C++ Developer Program</h3>
+        <div class="meta">Nov 2024 – Present · Remote</div>
         <ul>
           <li>
-            Python, NumPy, pandas, Matplotlib, scikit-learn: data cleaning,
-            visualization, supervised models (linear/logistic regression, k-NN,
-            decision trees)
-          </li>
-        </ul>
-
-        <h3>JavaScript / React Development (Certificate)</h3>
-        <div class="meta">Oct 2021</div>
-        <ul>
-          <li>
-            Built responsive pages/SPAs with HTML5, CSS3, Bootstrap, React
-            (hooks)
+            Advanced modern C++: STL internals, custom containers, concurrency,
+            performance profiling
           </li>
         </ul>
       </section>
 
       <section id="projects">
-        <h2>Selected Projects</h2>
+        <h2>Projects</h2>
 
         <div class="project">
           <div class="project-header">
@@ -690,33 +684,17 @@
             >
           </div>
           <div class="meta">
-            C++17/20, graph algorithms, JSON parsing/serialization, Dijkstra
-            shortest paths, SVG rendering
+            Yandex Practicum project · C++17, CMake, GoogleTest
           </div>
           <ul>
             <li>
-              Ingests stops, buses, and road distances; builds a directed,
-              weighted graph with wait/travel weights from routing settings
+              Route-planning library and CLI: builds a weighted transit graph,
+              answers shortest-route queries (Dijkstra) over a JSON API and
+              renders maps to SVG.
             </li>
             <li>
-              Computes optimal routes with clear itinerary breakdowns (Wait/Bus
-              segments) via a stable JSON query/response API
-            </li>
-            <li>
-              Memory-conscious storage using string_view keys and preallocated
-              containers to minimize copies and allocations
-            </li>
-            <li>
-              Renders route maps as SVG via a custom Document pipeline (Circle,
-              Polyline, Text) with theming and label placement
-            </li>
-            <li>
-              Modular architecture: transport_catalogue, router, json, svg, geo;
-              shipped as a CLI tool and reusable library with CMake
-            </li>
-            <li>
-              Quality gates: unit tests (GoogleTest), sanitizer-clean builds,
-              validated with Valgrind/heap profilers
+              string_view-keyed storage and preallocated containers to avoid
+              copies; sanitizer-clean and unit-tested.
             </li>
           </ul>
         </div>
@@ -730,12 +708,14 @@
           <a href="https://github.com/Garegin866" target="_blank" rel="noopener"
             >GitHub</a
           >
+          <a
+            href="https://www.linkedin.com/in/garegin-harutyunyan/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
         </div>
-        <p>Last updated: October 2025</p>
-        <p>
-          Built with semantic HTML, vanilla CSS/JS. No frameworks. Lighthouse
-          100/100.
-        </p>
+        <p>Last updated: October 2026</p>
       </footer>
     </div>
 
@@ -767,11 +747,6 @@
         } catch (err) {
           window.location.href = `mailto:${email}`;
         }
-      });
-
-      // Defer non-critical operations
-      window.addEventListener("load", () => {
-        console.log("Site loaded. Lighthouse-ready.");
       });
     </script>
   </body>
